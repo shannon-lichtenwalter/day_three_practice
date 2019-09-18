@@ -27,10 +27,27 @@ function createGreeting(name, age) {
 // }
 
 
-function jediName(firstName, lastName){
-  let first = firstName.slice(0,2);
-  let last = lastName.slice(0,3);
+function jediName(firstName, lastName) {
+  let first = firstName.slice(0, 2);
+  let last = lastName.slice(0, 3);
   return last + first;
 }
 
-console.log(jediName('Beyonce', 'Knowles'));
+// console.log(jediName('Beyonce', 'Knowles'));
+
+function beyond(num) {
+  if (num === Infinity) {
+    console.log('And Beyond');
+  }
+  if (isFinite(num) && num > 0) {
+    console.log('to infinity');
+  }
+  if (isFinite(num) && num < 0) {
+    console.log('to negative infinity');
+  }
+  if (num === 0) {
+    console.log('staying home');
+  }
+}
+
+beyond(Infinity);
