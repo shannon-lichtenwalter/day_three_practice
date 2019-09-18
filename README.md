@@ -1,1 +1,1 @@
-I am pracicing through this week's drills again.
+I am practicing through this week's drills again.
