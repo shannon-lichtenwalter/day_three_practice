@@ -159,10 +159,10 @@ function min(numbers) {
   let currentMin = numbers[0];
   let i = 1;
   while (i < numbers.length) {
-    if (currentMin > numbers[i]){
+    if (currentMin > numbers[i]) {
       currentMin = numbers[i];
     }
-    i++
+    i++;
   }
   return currentMin;
 }
@@ -171,10 +171,27 @@ function min(numbers) {
 // console.log(max(numList1));
 // console.log(min(numList1));
 
-function average(numbers){
+function average(numbers) {
   let total = 0;
   numbers.forEach(num => total += num);
-  return total/numbers.length;
+  return total / numbers.length;
 }
 
-console.log(average([1,2,3]));
+// console.log(average([1,2,3]));
+
+function repeat(fn, n) {
+  for (let i = 1; i <= n; i++) {
+    fn();
+  }
+}
+
+function hello() {
+  console.log('Hello world');
+}
+
+function goodbye() {
+  console.log('Goodbye world');
+}
+
+repeat(hello, 5);
+repeat(goodbye, 5);
