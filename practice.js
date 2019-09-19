@@ -167,6 +167,14 @@ function min(numbers) {
   return currentMin;
 }
 
-const numList1 = [-5, 28, 98, -20013, 0.7878, 22, 115];
-console.log(max(numList1));
-console.log(min(numList1));
+// const numList1 = [-5, 28, 98, -20013, 0.7878, 22, 115];
+// console.log(max(numList1));
+// console.log(min(numList1));
+
+function average(numbers){
+  let total = 0;
+  numbers.forEach(num => total += num);
+  return total/numbers.length;
+}
+
+console.log(average([1,2,3]));
