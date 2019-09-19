@@ -53,39 +53,37 @@ function beyond(num) {
 // beyond(Infinity);
 
 function decoder(strg) {
-  let array = strg.toLowerCase().split(' ');
+  const array = strg.toLowerCase().split(' ');
   let results = '';
   for (let i = 0; i < array.length; i++) {
-    let letter = array[i].charAt(0);
+    const letter = array[i].charAt(0);
     if (letter >= 'e') {
-      results = results.concat(' ');
+      results += ' ';
     } if (letter === 'a') {
-      results = results.concat(array[i].charAt(1));
+      results += array[i].charAt(1);
     } if (letter === 'b') {
-      results = results.concat(array[i].charAt(2));
+      results += array[i].charAt(2);
     } if (letter === 'c') {
-      results = results.concat(array[i].charAt(3));
+      results += array[i].charAt(3);
     } if (letter === 'd') {
-      results = results.concat(array[i].charAt(4));
+      results += array[i].charAt(4);
     }
   }
   console.log(results);
 }
 
 // let str = 'craft block argon meter bells brown croon droop';
-// let str2 = 'Here Doggo Indiana Jones Woof Woof Apple Banana Cool';
-// decoder(str2);
+// // let str2 = 'Here Doggo Indiana Jones Woof Woof Apple Banana Cool';
+// decoder(str);
 
 function days(month, leapYear) {
-  let result = `${month} has 30 days`;
   switch (month) {
   case 'February':
     if (leapYear) {
-      result = `${month} has 29 days`;
+      return `${month} has 29 days`;
     } else {
-      result = `${month} has 28 days`;
+      return `${month} has 28 days`;
     }
-    break;
   case 'January':
   case 'March':
   case 'May':
@@ -93,12 +91,12 @@ function days(month, leapYear) {
   case 'August':
   case 'October':
   case 'December':
-    result = `${month} has 31 days`;
-    break;
+    return `${month} has 31 days`;
+  default:
+    return `${month} has 30 days`;
   }
-  console.log(result);
 }
-// days('July', false);
+// console.log(days('July', false));
 
 function game(input) {
   let computer = Math.floor(Math.random() * 3 + 1);
@@ -193,5 +191,20 @@ function goodbye() {
   console.log('Goodbye world');
 }
 
-repeat(hello, 5);
-repeat(goodbye, 5);
+// repeat(hello, 5);
+// repeat(goodbye, 5);
+
+
+function personMaker() {
+  const person = {
+    firstName: 'Paul',
+    lastName: 'Jones',
+    fullName() {
+      return `${this.firstName} ${this.lastName}`;
+    },
+  };
+  return person;
+}
+
+const personMade = personMaker();
+console.log(personMade.fullName());
