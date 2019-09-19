@@ -136,8 +136,37 @@ function game(input) {
   }
 }
 
-game(2);
-game(1);
-game(3);
-game(2);
-game(2);
+// game(2);
+// game(1);
+// game(3);
+// game(2);
+// game(2);
+
+
+function max(numbers) {
+  let currentMax = numbers[0];
+  let i = 1;
+  while (i < numbers.length) {
+    if (currentMax < numbers[i]) {
+      currentMax = numbers[i];
+    }
+    i++;
+  }
+  return currentMax;
+}
+
+function min(numbers) {
+  let currentMin = numbers[0];
+  let i = 1;
+  while (i < numbers.length) {
+    if (currentMin > numbers[i]){
+      currentMin = numbers[i];
+    }
+    i++
+  }
+  return currentMin;
+}
+
+const numList1 = [-5, 28, 98, -20013, 0.7878, 22, 115];
+console.log(max(numList1));
+console.log(min(numList1));
