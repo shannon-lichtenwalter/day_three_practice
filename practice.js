@@ -50,4 +50,28 @@ function beyond(num) {
   }
 }
 
-beyond(Infinity);
+// beyond(Infinity);
+
+function decoder(strg) {
+  let array = strg.toLowerCase().split(' ');
+  let results = '';
+  for (let i = 0; i < array.length; i++) {
+    let letter = array[i].charAt(0);
+    if (letter >= 'e') {
+      results = results.concat(' ');
+    } if (letter === 'a') {
+      results = results.concat(array[i].charAt(1));
+    } if (letter === 'b') {
+      results = results.concat(array[i].charAt(2));
+    } if (letter === 'c') {
+      results = results.concat(array[i].charAt(3));
+    } if (letter === 'd') {
+      results = results.concat(array[i].charAt(4));
+    }
+  }
+  console.log(results);
+}
+
+let str = 'craft block argon meter bells brown croon droop';
+let str2 = 'Here Doggo Indiana Jones Woof Woof Apple Banana Cool';
+decoder(str2);
