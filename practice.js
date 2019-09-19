@@ -98,4 +98,46 @@ function days(month, leapYear) {
   }
   console.log(result);
 }
-days('July', false);
+// days('July', false);
+
+function game(input) {
+  let computer = Math.floor(Math.random() * 3 + 1);
+  console.log(`The computer played ${computer}!`);
+
+  if (input === computer) {
+    console.log('Tie!');
+  }
+  if (input > 3 || input < 1) {
+    throw new Error('Sorry, Invalid entry');
+  }
+  if (input === 1) {
+    if (computer === 2) {
+      console.log('Oooh, too bad. Paper beats Rock. You lose!');
+    }
+    if (computer === 3) {
+      console.log('Rock beats Scissors! You Win!');
+    }
+  }
+  if (input === 2) {
+    if (computer === 1) {
+      console.log('Paper beats Rock! You Win!');
+    }
+    if (computer === 3) {
+      console.log('Oooh, too bad. Scissors beats Paper. You lose!');
+    }
+  }
+  if (input === 3) {
+    if (computer === 1) {
+      console.log('Oooh, too bad. Rock beats Scissors. You lose!');
+    }
+    if (computer === 2) {
+      console.log('Scissors beats Paper! You Win!');
+    }
+  }
+}
+
+game(2);
+game(1);
+game(3);
+game(2);
+game(2);
