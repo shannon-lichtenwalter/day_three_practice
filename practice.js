@@ -72,6 +72,30 @@ function decoder(strg) {
   console.log(results);
 }
 
-let str = 'craft block argon meter bells brown croon droop';
-let str2 = 'Here Doggo Indiana Jones Woof Woof Apple Banana Cool';
-decoder(str2);
+// let str = 'craft block argon meter bells brown croon droop';
+// let str2 = 'Here Doggo Indiana Jones Woof Woof Apple Banana Cool';
+// decoder(str2);
+
+function days(month, leapYear) {
+  let result = `${month} has 30 days`;
+  switch (month) {
+  case 'February':
+    if (leapYear) {
+      result = `${month} has 29 days`;
+    } else {
+      result = `${month} has 28 days`;
+    }
+    break;
+  case 'January':
+  case 'March':
+  case 'May':
+  case 'July':
+  case 'August':
+  case 'October':
+  case 'December':
+    result = `${month} has 31 days`;
+    break;
+  }
+  console.log(result);
+}
+days('July', false);
